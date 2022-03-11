@@ -1,15 +1,9 @@
-<script lang="ts">
-	import { message } from '$lib/scripts/utils';
-
-	console.log(message);
-</script>
-
 <svelte:head>
-	<title>{message}</title>
+	<title>About</title>
 </svelte:head>
 
 <div class="wrapper row jcenter xfill">
-	<h1>{message}</h1>
+	<h1>About page</h1>
 </div>
 
 <style lang="scss">
