@@ -1,12 +1,17 @@
-## Sveltekit starter project
+## `Sveltekit+Vite+Typescript` starter template 🚀
 
 ![logo](static/logo-192.png)
 
-A fullstack starter project for Sveltekit with typescript, sass, and vite. PWA and SSR ready, with **verdu scss utility classes** and two professional fonts included.
+A starter template for `Sveltekit.js` for webs/PWAs and SSR ready. The template is based on:
 
----
+- [Svelte.js](https://svelte.dev/)
+- [Vite.js](https://vitejs.dev/)
+- [Sass](https://sass-lang.com/)
+- Typescript
+- [Verdu.scss](https://www.npmjs.com/package/verdu)
 
-Start with the following command:
-  ```bash
-    npx degit verdulife/sveltekit-ts [project-name]
-  ```
+To start run the next command:
+
+```bash
+npx degit verdulife/electron [project-name]
+```
