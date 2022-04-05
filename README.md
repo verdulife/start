@@ -1,6 +1,6 @@
-## `Sveltekit+Vite+Typescript` starter template 🚀
-
 ![logo](static/logo-192.png)
+
+## `Sveltekit+Vite+Typescript` starter template 🚀
 
 A starter template for `Sveltekit.js` for webs/PWAs and SSR ready. The template is based on:
 
@@ -13,5 +13,5 @@ A starter template for `Sveltekit.js` for webs/PWAs and SSR ready. The template 
 To start run the next command:
 
 ```bash
-npx degit verdulife/electron [project-name]
+npx degit verdulife/start [project-name]
 ```
