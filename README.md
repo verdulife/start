@@ -2,7 +2,7 @@
 
 ## `Sveltekit+Vite+Typescript` starter template 🚀
 
-A starter template for `Sveltekit.js` for webs/PWAs and SSR ready. The template is based on:
+A starter template for `Sveltekit.js` webs/PWAs and SSR ready. The template is based on:
 
 - [Svelte.js](https://svelte.dev/)
 - [Vite.js](https://vitejs.dev/)
