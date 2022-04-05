@@ -7,7 +7,7 @@ A starter template for `Sveltekit.js` for webs/PWAs and SSR ready. The template 
 - [Svelte.js](https://svelte.dev/)
 - [Vite.js](https://vitejs.dev/)
 - [Sass](https://sass-lang.com/)
-- Typescript
+- [Typescript](https://www.typescriptlang.org/)
 - [Verdu.scss](https://www.npmjs.com/package/verdu)
 
 To start run the next command:
