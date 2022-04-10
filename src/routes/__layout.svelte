@@ -9,13 +9,14 @@
 <script lang="ts">
 	import 'verdu/fonts/circular.css';
 	import 'verdu/fonts/operator.css';
+	import { ThemeStore } from '$lib/store';
 	import Transition from '$lib/components/Transition.svelte';
 	import Nav from '$lib/components/Nav.svelte';
 
 	export let url: string;
 </script>
 
-<main>
+<main class:dark={$ThemeStore === 'dark'}>
 	<div class="scroll">
 		<Nav />
 
@@ -27,15 +28,17 @@
 
 <style lang="scss">
 	:global {
-		@import 'verdu/_reset.scss';
+		@import '../routes/global';
 		@import 'verdu/verdu.scss';
 	}
 
 	main {
 		background: $white;
+		transition: 200ms;
+	}
 
-		@media (prefers-color-scheme: dark) {
-			background: $black;
-		}
+	.dark {
+		background: $black;
+		color: $white;
 	}
 </style>

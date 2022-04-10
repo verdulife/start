@@ -1,14 +1,10 @@
 import { browser } from '$app/env';
 import { writable } from 'svelte/store';
-import type { defaultType } from '$lib/types';
 
-const defaultStore: defaultType = {
-	first_visit: true,
-	createdAt: new Date()
-};
+const defaultTheme = 'dark';
 
-export const UserStore = writable(
-	(browser && JSON.parse(localStorage.getItem('UserStore'))) || defaultStore
+export const ThemeStore = writable(
+	(browser && JSON.parse(localStorage.getItem('ThemeStore'))) || defaultTheme
 );
 
-UserStore.subscribe((val) => browser && (localStorage.UserStore = JSON.stringify(val)));
+ThemeStore.subscribe((val) => browser && (localStorage.ThemeStore = JSON.stringify(val)));

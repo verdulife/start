@@ -2,6 +2,8 @@
 
 ## `Sveltekit+Vite+Typescript` starter template 🚀
 
+<br>
+
 A starter template for `Sveltekit.js` webs/PWAs and SSR ready. The template is based on:
 
 - [Svelte.js](https://svelte.dev/)
@@ -9,6 +11,8 @@ A starter template for `Sveltekit.js` webs/PWAs and SSR ready. The template is b
 - [Sass](https://sass-lang.com/)
 - [Typescript](https://www.typescriptlang.org/)
 - [Verdu.scss](https://www.npmjs.com/package/verdu)
+
+<br>
 
 To start run the next command:
 

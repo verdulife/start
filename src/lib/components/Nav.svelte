@@ -1,33 +1,40 @@
 <script lang="ts">
-	console.log('Navbar works!');
+	import { ThemeStore } from '$lib/store';
+
+	function toggleTheme() {
+		if ($ThemeStore === 'dark') ThemeStore.set('light');
+		else ThemeStore.set('dark');
+	}
 </script>
 
-<nav class="row jbetween acenter xfill">
-	<a href="/">
-		<img class="yfill" src="/favicon.svg" alt="Logo" />
-	</a>
-
-	<div class="row">
-		<a class="btn sec semi" href="/">HOME</a>
-		<a class="btn sec semi" href="/about">ABOUT</a>
-	</div>
+<nav class="row jcenter xfill" class:dark={$ThemeStore === 'dark'}>
+	<img class="yfill" src="/favicon.svg" alt="Logo" on:click={toggleTheme} />
 </nav>
 
 <style lang="scss">
 	nav {
 		position: sticky;
 		inset: 0 0 auto 0;
+		height: 80px;
 		background: $white;
 		border-bottom: 1px solid $border;
 		padding: 20px;
-
-		@media (prefers-color-scheme: dark) {
-			border-bottom: 1px solid $pri;
-			background: $black;
+		transition: 200ms;
+		
+		img {
+			cursor: pointer;
+			filter: invert(1);
+			transition: 200ms;
 		}
+	}
 
-		a {
-			margin: 0 10px;
+	.dark {
+		background: $black;
+		color: $white;
+		border-color: $grey;
+
+		img {
+			filter: invert(0);
 		}
 	}
 </style>

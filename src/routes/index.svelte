@@ -1,11 +1,12 @@
 <script lang="ts">
-	import { message } from '$lib/scripts/utils';
+	import type { welcomeType } from '$lib/types';
+	export let data: welcomeType;
 
-	console.log(message);
+	const { title, message } = data;
 </script>
 
 <svelte:head>
-	<title>{message}</title>
+	<title>{title}</title>
 </svelte:head>
 
 <div class="wrapper row jcenter xfill">
@@ -14,19 +15,11 @@
 
 <style lang="scss">
 	.wrapper {
-		background: $white;
 		padding: 15% 40px;
-
-		@media (prefers-color-scheme: dark) {
-			background: $black;
-		}
 	}
 
 	h1 {
-		color: $pri;
-
-		@media (prefers-color-scheme: dark) {
-			color: $sec;
-		}
+		font-size: 80px;
+		color: $grey;
 	}
 </style>

@@ -1,4 +1,4 @@
-export type defaultType = {
-	first_visit: boolean;
-	createdAt: Date;
+export type welcomeType = {
+	title: string;
+	message: string;
 };
