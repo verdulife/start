@@ -1,10 +1,8 @@
 import { browser } from '$app/env';
 import { writable } from 'svelte/store';
 
-const defaultTheme = 'dark';
-
-export const ThemeStore = writable(
-	(browser && JSON.parse(localStorage.getItem('ThemeStore'))) || defaultTheme
+export const DarkTheme = writable(
+	(browser && JSON.parse(localStorage.getItem('DarkTheme'))) || false
 );
 
-ThemeStore.subscribe((val) => browser && (localStorage.ThemeStore = JSON.stringify(val)));
+DarkTheme.subscribe((val) => browser && (localStorage.DarkTheme = JSON.stringify(val)));

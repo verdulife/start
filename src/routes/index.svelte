@@ -17,9 +17,4 @@
 	.wrapper {
 		padding: 15% 40px;
 	}
-
-	h1 {
-		font-size: 80px;
-		color: $grey;
-	}
 </style>

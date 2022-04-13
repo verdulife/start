@@ -9,14 +9,27 @@
 <script lang="ts">
 	import 'verdu/fonts/circular.css';
 	import 'verdu/fonts/operator.css';
-	import { ThemeStore } from '$lib/store';
 	import Transition from '$lib/components/Transition.svelte';
 	import Nav from '$lib/components/Nav.svelte';
+	import { DarkTheme } from '$lib/store';
+	import { onMount } from 'svelte';
+
+	console.log(`Dark theme is: ${$DarkTheme ? 'enabled' : 'disabled'}`);
 
 	export let url: string;
+
+	onMount(() => {
+		const root = document.querySelector(':root') as HTMLElement;
+		console.log(getComputedStyle(root).getPropertyValue('--bg'));
+
+		setTimeout(() => {
+			root.style.setProperty('--bg', '#111');
+			root.style.setProperty('--base', '#eee');
+		}, 3000);
+	});
 </script>
 
-<main class:dark={$ThemeStore === 'dark'}>
+<main>
 	<div class="scroll">
 		<Nav />
 
@@ -33,12 +46,8 @@
 	}
 
 	main {
-		background: $white;
+		background: var(--bg);
+		color: var(--base);
 		transition: 200ms;
-	}
-
-	.dark {
-		background: $black;
-		color: $white;
 	}
 </style>
