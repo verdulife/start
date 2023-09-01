@@ -1,0 +1,31 @@
+/* 
+          __             __                
+    _____/ /_____ ______/ /________________
+   / ___/ __/ __ `/ ___/ __/ ___/ ___/ ___/
+  (__  ) /_/ /_/ / /  / /_/ /__(__  |__  ) 
+ /____/\__/\__,_/_/   \__/\___/____/____/  v0.0.1 
+
+*/
+
+@custom-selector :--button button, a[role='button'];
+
+/* ⚡ startcss reset ⚡ */
+
+:--button {
+	cursor: pointer;
+	background-color: var(--accent);
+	color: var(--base);
+	font-size: var(--font-xs);
+	text-align: center;
+	border-radius: 1em;
+	padding: 1.5em 3em;
+	transition: 150ms;
+	user-select: none;
+	-webkit-user-drag: none;
+	
+	&.unset {
+		background-color: unset;
+		border-radius: unset;
+		padding: 0;
+	}
+}

@@ -1,0 +1,33 @@
+/* 
+          __             __                
+    _____/ /_____ ______/ /________________
+   / ___/ __/ __ `/ ___/ __/ ___/ ___/ ___/
+  (__  ) /_/ /_/ / /  / /_/ /__(__  |__  ) 
+ /____/\__/\__,_/_/   \__/\___/____/____/  v0.0.1 
+
+*/
+
+/* ⚡ startcss reset ⚡ */
+
+:root {
+	color: var(--base-900);
+	font-family: var(--font-base);
+	font-size: var(--font-sm);
+	font-weight: normal;
+	line-height: 1.6;
+	vertical-align: baseline;
+
+	@media (--dark) {
+		color: var(--base);
+	}
+
+	::selection {
+		background-color: var(--base-900);
+		color: var(--base);
+	
+		@media (--dark) {
+			background-color: var(--base);
+			color: var(--base-900);
+		}
+	}
+}

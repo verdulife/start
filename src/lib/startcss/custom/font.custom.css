@@ -1,0 +1,34 @@
+/* 
+          __             __                
+    _____/ /_____ ______/ /________________
+   / ___/ __/ __ `/ ___/ __/ ___/ ___/ ___/
+  (__  ) /_/ /_/ / /  / /_/ /__(__  |__  ) 
+ /____/\__/\__,_/_/   \__/\___/____/____/  v0.0.1 
+
+*/
+
+@import '../fonts/inter-variable.css';
+
+/* 🎨 custom properties 🎨 */
+
+:root {
+	--emoji-ui: 'Segoe UI Emoji', 'Segoe UI Symbol', 'Apple Color Emoji';
+	--system-ui: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, var(--emoji-ui);
+	--code-ui: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono', 'Roboto Mono',
+		'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro', 'Fira Mono', 'Droid Sans Mono',
+		'Courier New', monospace, var(--emoji-ui);
+
+	--font-base: 'Inter', var(--system-ui);
+	--font-title: var(--font-base);
+	--font-code: var(--code-ui);
+
+	--font-2xs: clamp(10px, 1vw, 12px);
+	--font-xs: clamp(12px, 2vw, 14px);
+	--font-sm: clamp(14px, 3vw, 18px);
+	--font-md: clamp(18px, 4vw, 22px);
+	--font-lg: clamp(22px, 5vw, 26px);
+	--font-xl: clamp(26px, 7vw, 36px);
+	--font-2xl: clamp(36px, 10vw, 46px);
+	--font-3xl: clamp(46px, 12vw, 66px);
+	--font-4xl: clamp(66px, 12vw, 86px);
+}

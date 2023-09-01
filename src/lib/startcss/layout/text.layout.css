@@ -1,0 +1,79 @@
+.tleft {
+	text-align: left;
+}
+.tcenter {
+	text-align: center;
+}
+.tright {
+	text-align: right;
+}
+.tjustify {
+	text-align: justify;
+}
+
+.ltr {
+	direction: ltr;
+}
+.rtl {
+	direction: rtl;
+}
+
+.vertical-lr {
+	writing-mode: vertical-lr;
+	text-orientation: upright;
+}
+.vertical-rl {
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+}
+
+.clamp {
+	--line-clamp: 1;
+
+	display: -webkit-box;
+	-webkit-line-clamp: var(--line-clamp);
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+@each $media in sm, md, lg, xl, 2xl {
+	@media (--$(media)) {
+		.tleft\@$(media) {
+			text-align: left;
+		}
+		.tcenter\@$(media) {
+			text-align: center;
+		}
+		.tright\@$(media) {
+			text-align: right;
+		}
+		.tjustify\@$(media) {
+			text-align: justify;
+		}
+
+		.ltr\@$(media) {
+			direction: ltr;
+		}
+		.rtl\@$(media) {
+			direction: rtl;
+		}
+
+		.vertical-lr\@$(media) {
+			writing-mode: vertical-lr;
+			text-orientation: upright;
+		}
+		.vertical-rl\@$(media) {
+			writing-mode: vertical-rl;
+			text-orientation: upright;
+		}
+
+		.clamp\@$(media) {
+			--line-clamp: 1;
+
+			display: -webkit-box;
+			-webkit-line-clamp: var(--line-clamp);
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+		}
+	}
+}

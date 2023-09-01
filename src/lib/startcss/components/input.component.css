@@ -1,0 +1,65 @@
+/* 
+          __             __                
+    _____/ /_____ ______/ /________________
+   / ___/ __/ __ `/ ___/ __/ ___/ ___/ ___/
+  (__  ) /_/ /_/ / /  / /_/ /__(__  |__  ) 
+ /____/\__/\__,_/_/   \__/\___/____/____/  v0.0.1 
+
+*/
+
+@custom-selector :--input input, select, textarea;
+@custom-selector :--input-element [type='checkbox'], [type='radio'], [type='range'], progress;
+
+/* ⚡ startcss reset ⚡ */
+
+:--input:not(:--input-element) {
+	background-color: var(--base-100);
+	border: 1px solid var(--base-200);
+	border-radius: 1em;
+	padding: 1.5em;
+	transition: 150ms;
+	
+	@media (--dark) {
+		background-color: var(--base-900);
+		border: 1px solid var(--base-800);
+	}
+	
+	
+	&:focus:not(:disabled),
+	&:active:not(:disabled) {
+		box-shadow: inset 0 -10px 0 -6px var(--accent);
+	}
+	
+	&::placeholder {
+		color: var(--base-500);
+	}
+	
+	&:disabled {
+		cursor: not-allowed;
+		background-color: var(--base-200);
+		border-color: var(--base-300);
+	}
+}
+
+select {
+	appearance: none;
+}
+
+textarea {
+	resize: none;
+}
+
+option,
+optgroup {
+	background-color: var(--base);
+	color: var(--base-900);
+	
+	@media(--dark) {
+		background-color: var(--base-900);
+		color: var(--base);
+	}
+}
+
+:--input-element {
+	--accent-color: var(--accent);
+}

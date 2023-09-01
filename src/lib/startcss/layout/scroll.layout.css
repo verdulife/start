@@ -1,0 +1,78 @@
+.xscroll {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+
+	&.smooth {
+		scroll-behavior: smooth;
+	}
+
+	&.snap {
+		scroll-snap-type: y mandatory;
+
+		& > *,
+		&.start > * {
+			scroll-snap-align: start;
+			scroll-snap-stop: always;
+		}
+
+		&.center > * {
+			scroll-snap-align: center;
+		}
+
+		&.end > * {
+			scroll-snap-align: center;
+		}
+	}
+
+	&.hide {
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+}
+
+.yscroll {
+	position: relative;
+	width: 100%;
+	display: block;
+	overflow-x: auto;
+	overflow-y: hidden;
+	white-space: nowrap;
+	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+
+	& > * {
+		display: inline-flex;
+		white-space: normal;
+	}
+
+	&.snap {
+		scroll-snap-type: x mandatory;
+
+		& > *,
+		&.start > * {
+			scroll-snap-align: start;
+			scroll-snap-stop: always;
+		}
+
+		&.center > * {
+			scroll-snap-align: center;
+		}
+
+		&.end > * {
+			scroll-snap-align: end;
+		}
+	}
+
+	&.hide {
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+}
