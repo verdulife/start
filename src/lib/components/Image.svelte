@@ -5,4 +5,4 @@
 	export let alt = null;
 </script>
 
-<img {alt} {src} {width} {height} decoding="async" loading="lazy" />
+<img {width} {height} {src} {alt} loading="lazy" decoding="async" />

@@ -14,26 +14,27 @@
 
 :--input:not(:--input-element) {
 	background-color: var(--base-100);
+	font-size: var(--font-md);
 	border: 1px solid var(--base-200);
 	border-radius: 1em;
-	padding: 1.5em;
+	padding: 1em;
 	transition: 150ms;
-	
+
 	@media (--dark) {
 		background-color: var(--base-900);
-		border: 1px solid var(--base-800);
+		color: var(--base);
+		border-color: var(--base-700);
 	}
-	
-	
+
 	&:focus:not(:disabled),
 	&:active:not(:disabled) {
 		box-shadow: inset 0 -10px 0 -6px var(--accent);
 	}
-	
+
 	&::placeholder {
 		color: var(--base-500);
 	}
-	
+
 	&:disabled {
 		cursor: not-allowed;
 		background-color: var(--base-200);
@@ -53,8 +54,8 @@ option,
 optgroup {
 	background-color: var(--base);
 	color: var(--base-900);
-	
-	@media(--dark) {
+
+	@media (--dark) {
 		background-color: var(--base-900);
 		color: var(--base);
 	}
